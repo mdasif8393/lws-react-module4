@@ -1,10 +1,10 @@
 import "./App.css";
-import Counter from "./components/Counter";
+import CatFriends from "./components/CatFriends";
 
 function App() {
   return (
     <>
-      <Counter />
+      <CatFriends />
     </>
   );
 }
