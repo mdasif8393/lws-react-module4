@@ -1,15 +1,19 @@
 import { useRef } from "react";
+import MyInput from "./MyInput";
 
 export default function Form() {
-  const myRef = useRef(null);
+  const inputRef = useRef(null);
 
-  const handleScroll = () => {
-    myRef.current.textContent = "Hello react";
-  };
+  function handleClick() {
+    inputRef.current.focus();
+  }
+
   return (
     <>
-      <div ref={myRef}>Form</div>
-      <button onClick={handleScroll}>Scroll</button>
+      <MyInput type="text" placeholder="Enter Name" ref={inputRef} />
+      <br />
+      <br />
+      <button onClick={handleClick}>Focus the input</button>
     </>
   );
 }
