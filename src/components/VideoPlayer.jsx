@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useEffect, useRef } from "react";
 
 export default function VideoPlayer({ src, isPlaying }) {
@@ -5,11 +6,12 @@ export default function VideoPlayer({ src, isPlaying }) {
 
   useEffect(() => {
     if (isPlaying) {
-      ref.current.play(); // Calling these while rendering isn't allowed.
+      console.log("Calling video.play()");
+      ref.current.play();
     } else {
-      ref.current.pause(); // Also, this crashes.
+      console.log("Calling video.pause()");
+      ref.current.pause();
     }
-  });
-
-  return <video src={src} ref={ref} />;
+  }, [isPlaying]);
+  return <video ref={ref} src={src} loop playsInline />;
 }
