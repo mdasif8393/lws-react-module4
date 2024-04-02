@@ -1,17 +1,10 @@
-import { useState } from "react";
 import "./App.css";
-import ChatRoom from "./components/ChatRoom";
+import Comments from "./components/Comments";
 
 function App() {
-  const [show, setShow] = useState(true);
   return (
     <>
-      <div>
-        <button onClick={() => setShow((s) => !s)}>
-          {show ? "Hide" : "Show"}
-        </button>
-      </div>
-      {show && <ChatRoom />}
+      <Comments postId="2" />
     </>
   );
 }
