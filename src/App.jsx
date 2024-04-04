@@ -1,16 +1,14 @@
 // import Example2 from "./components/Example2";
-import { useState } from "react";
-import Example3 from "./components/Example3";
-import { items1, items2 } from "./data/itemsData";
 
 // import Example2 from "./components/Example2";
+import Example4 from "./components/Example4";
 
 function App() {
   // example 2
   // const [userId, setUserId] = useState(1);
 
   // example3
-  const [items, setItems] = useState(items1);
+  // const [items, setItems] = useState(items1);
 
   return (
     <div>
@@ -24,9 +22,10 @@ function App() {
       </div>
       <Example2 key={userId} userId={userId} /> */}
       {/* Example 3: Adjusting some state when a prop change */}
-      <button onClick={() => setItems(items2)}>Switch to Items2</button>{" "}
+      {/* <button onClick={() => setItems(items2)}>Switch to Items2</button>{" "}
       <button onClick={() => setItems(items1)}>Switch to Items1</button>
-      <Example3 items={items} />
+      <Example3 items={items} /> */}
+      <Example4 />
     </div>
   );
 }
